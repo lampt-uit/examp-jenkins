@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  docker-node:
+    build: .
+    ports:
+      - "5000:8000"
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
